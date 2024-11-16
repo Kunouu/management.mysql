@@ -1,6 +1,6 @@
 {
-    "pass": "Zerolon1",
-    "user": "root",
+    "pass": "123",
+    "user": "postgres",
     "host": "localhost",
     "database": "employees"
 }

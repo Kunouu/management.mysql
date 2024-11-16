@@ -2,13 +2,13 @@ import re
 from tkinter import *
 from tkinter import messagebox 
 from tkinter import ttk
-from sqlClient import mySqlClient
+from sqlClient import PostgreSqlClient
 import json
 
 file = open('config.json', 'r')
 configData = json.load(file)
 
-sqlClient = mySqlClient(username=configData['user'], password=configData['pass'], host=configData['host'], database=configData['database'])
+sqlClient = PostgreSqlClient(username=configData['user'], password=configData['pass'], host=configData['host'], database=configData['database'])
 
 window = Tk()
 
@@ -122,7 +122,7 @@ def addScreen():
 
     countryOptions = ["Казахстан", "США", "Канада", "Германия", "Франция", "Япония"]
     cityOptions = {
-        "Казахстан": ["Алматы", "Нур-Султан", "Шымкент"],
+        "Казахстан": ["Алматы", "Астана", "Шымкент"],
         "США": ["Нью-Йорк", "Лос-Анджелес", "Чикаго"],
         "Канада": ["Торонто", "Монреаль", "Ванкувер"],
         "Германия": ["Берлин", "Гамбург", "Мюнхен"],
